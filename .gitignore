@@ -7,5 +7,5 @@ ENV/
 env/
 .env
 .pytest_cache/
-outputs/
+# outputs/
 .DS_Store
