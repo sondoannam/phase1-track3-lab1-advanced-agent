@@ -1,0 +1,2451 @@
+{
+  "meta": {
+    "dataset": "hotpot_real.json",
+    "mode": "mock",
+    "num_records": 240,
+    "agents": [
+      "react",
+      "reflexion"
+    ]
+  },
+  "summary": {
+    "react": {
+      "count": 120,
+      "em": 0.75,
+      "avg_attempts": 1,
+      "avg_token_estimate": 3616.48,
+      "avg_latency_ms": 6548.74
+    },
+    "reflexion": {
+      "count": 120,
+      "em": 0.95,
+      "avg_attempts": 1.325,
+      "avg_token_estimate": 5603.54,
+      "avg_latency_ms": 9996.08
+    },
+    "delta_reflexion_minus_react": {
+      "em_abs": 0.2,
+      "attempts_abs": 0.325,
+      "tokens_abs": 1987.06,
+      "latency_abs": 3447.34
+    }
+  },
+  "failure_modes": {
+    "react": {
+      "wrong_final_answer": 30,
+      "none": 90
+    },
+    "reflexion": {
+      "none": 114,
+      "reflection_overfit": 6
+    }
+  },
+  "examples": [
+    {
+      "qid": "hq001",
+      "agent_type": "react",
+      "gold_answer": "yes",
+      "predicted_answer": "No",
+      "is_correct": false,
+      "attempts": 1,
+      "failure_mode": "wrong_final_answer",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq002",
+      "agent_type": "react",
+      "gold_answer": "Chief of Protocol",
+      "predicted_answer": "Secretary of State for Constitutional Affairs",
+      "is_correct": false,
+      "attempts": 1,
+      "failure_mode": "wrong_final_answer",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq003",
+      "agent_type": "react",
+      "gold_answer": "Animorphs",
+      "predicted_answer": "The Hork-Bajir Chronicles",
+      "is_correct": false,
+      "attempts": 1,
+      "failure_mode": "wrong_final_answer",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq004",
+      "agent_type": "react",
+      "gold_answer": "no",
+      "predicted_answer": "No",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq005",
+      "agent_type": "react",
+      "gold_answer": "Greenwich Village, New York City",
+      "predicted_answer": "Greenwich Village",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq006",
+      "agent_type": "react",
+      "gold_answer": "YG Entertainment",
+      "predicted_answer": "YG Entertainment",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq007",
+      "agent_type": "react",
+      "gold_answer": "Eenasul Fateh",
+      "predicted_answer": "Eenasul Fateh",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq008",
+      "agent_type": "react",
+      "gold_answer": "3,677 seated",
+      "predicted_answer": "4,000",
+      "is_correct": false,
+      "attempts": 1,
+      "failure_mode": "wrong_final_answer",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq009",
+      "agent_type": "react",
+      "gold_answer": "Terry Richardson",
+      "predicted_answer": "Annie Morton",
+      "is_correct": false,
+      "attempts": 1,
+      "failure_mode": "wrong_final_answer",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq010",
+      "agent_type": "react",
+      "gold_answer": "yes",
+      "predicted_answer": "yes",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq011",
+      "agent_type": "react",
+      "gold_answer": "Kansas Song",
+      "predicted_answer": "Kansas Song",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq012",
+      "agent_type": "react",
+      "gold_answer": "David Weissman",
+      "predicted_answer": "David Weissman",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq013",
+      "agent_type": "react",
+      "gold_answer": "1999",
+      "predicted_answer": "1999",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq014",
+      "agent_type": "react",
+      "gold_answer": "no",
+      "predicted_answer": "No",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq015",
+      "agent_type": "react",
+      "gold_answer": "from 1986 to 2013",
+      "predicted_answer": "1995-1996",
+      "is_correct": false,
+      "attempts": 1,
+      "failure_mode": "wrong_final_answer",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq016",
+      "agent_type": "react",
+      "gold_answer": "9,984",
+      "predicted_answer": "United States",
+      "is_correct": false,
+      "attempts": 1,
+      "failure_mode": "wrong_final_answer",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq017",
+      "agent_type": "react",
+      "gold_answer": "the North Atlantic Conference",
+      "predicted_answer": "North Atlantic Conference",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq018",
+      "agent_type": "react",
+      "gold_answer": "yes",
+      "predicted_answer": "yes",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq019",
+      "agent_type": "react",
+      "gold_answer": "1969 until 1974",
+      "predicted_answer": "1969-1974",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq020",
+      "agent_type": "react",
+      "gold_answer": "Robert Erskine Childers DSC",
+      "predicted_answer": "Robert Erskine Childers",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq021",
+      "agent_type": "react",
+      "gold_answer": "Pedro Rodr\u00edguez",
+      "predicted_answer": "Sergio P\u00e9rez",
+      "is_correct": false,
+      "attempts": 1,
+      "failure_mode": "wrong_final_answer",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq022",
+      "agent_type": "react",
+      "gold_answer": "Sonic",
+      "predicted_answer": "Tails",
+      "is_correct": false,
+      "attempts": 1,
+      "failure_mode": "wrong_final_answer",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq023",
+      "agent_type": "react",
+      "gold_answer": "keyboard function keys",
+      "predicted_answer": "Front Row",
+      "is_correct": false,
+      "attempts": 1,
+      "failure_mode": "wrong_final_answer",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq024",
+      "agent_type": "react",
+      "gold_answer": "Badly Drawn Boy",
+      "predicted_answer": "Badly Drawn Boy",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq025",
+      "agent_type": "react",
+      "gold_answer": "World's Best Goalkeeper",
+      "predicted_answer": "Peter Schmeichel",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq026",
+      "agent_type": "react",
+      "gold_answer": "Barton Lee Hazlewood",
+      "predicted_answer": "Lee Hazlewood",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq027",
+      "agent_type": "react",
+      "gold_answer": "1838",
+      "predicted_answer": "1838",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq028",
+      "agent_type": "react",
+      "gold_answer": "yes",
+      "predicted_answer": "yes",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq029",
+      "agent_type": "react",
+      "gold_answer": "Henry J. Kaiser",
+      "predicted_answer": "Henry J. Kaiser",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq030",
+      "agent_type": "react",
+      "gold_answer": "Arena of Khazan",
+      "predicted_answer": "Arena of Khazan",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq031",
+      "agent_type": "react",
+      "gold_answer": "2000",
+      "predicted_answer": "2000",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq032",
+      "agent_type": "react",
+      "gold_answer": "Fujioka, Gunma",
+      "predicted_answer": "Japan",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq033",
+      "agent_type": "react",
+      "gold_answer": "Charles Eug\u00e8ne",
+      "predicted_answer": "Charles Nungesser",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq034",
+      "agent_type": "react",
+      "gold_answer": "no",
+      "predicted_answer": "No",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq035",
+      "agent_type": "react",
+      "gold_answer": "Letters to Cleo",
+      "predicted_answer": "Letters to Cleo",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq036",
+      "agent_type": "react",
+      "gold_answer": "October 1922",
+      "predicted_answer": "1922",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq037",
+      "agent_type": "react",
+      "gold_answer": "2000",
+      "predicted_answer": "2000",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq038",
+      "agent_type": "react",
+      "gold_answer": "World War II",
+      "predicted_answer": "World War II",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq039",
+      "agent_type": "react",
+      "gold_answer": "no",
+      "predicted_answer": "No",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq040",
+      "agent_type": "react",
+      "gold_answer": "New York City",
+      "predicted_answer": "New York City",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq041",
+      "agent_type": "react",
+      "gold_answer": "Scotch Collie",
+      "predicted_answer": "Scotch Collie",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq042",
+      "agent_type": "react",
+      "gold_answer": "Mumbai",
+      "predicted_answer": "Mumbai",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq043",
+      "agent_type": "react",
+      "gold_answer": "1962",
+      "predicted_answer": "1962",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq044",
+      "agent_type": "react",
+      "gold_answer": "sovereignty",
+      "predicted_answer": "Ethiopian sovereignty",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq045",
+      "agent_type": "react",
+      "gold_answer": "Nelson Rockefeller",
+      "predicted_answer": "Nelson Rockefeller",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq046",
+      "agent_type": "react",
+      "gold_answer": "Yellowcraig",
+      "predicted_answer": "Yellowcraigs",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq047",
+      "agent_type": "react",
+      "gold_answer": "Phil Spector",
+      "predicted_answer": "Phil Spector",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq048",
+      "agent_type": "react",
+      "gold_answer": "Organizations could come together to address global issues",
+      "predicted_answer": "World Summit of Nobel Peace Laureates",
+      "is_correct": false,
+      "attempts": 1,
+      "failure_mode": "wrong_final_answer",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq049",
+      "agent_type": "react",
+      "gold_answer": "yes",
+      "predicted_answer": "yes",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq050",
+      "agent_type": "react",
+      "gold_answer": "English Electric Canberra",
+      "predicted_answer": "English Electric Canberra",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq051",
+      "agent_type": "react",
+      "gold_answer": "2009 Big 12 Conference",
+      "predicted_answer": "2009 Big 12 Conference football season",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq052",
+      "agent_type": "react",
+      "gold_answer": "1,462",
+      "predicted_answer": "1,462",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq053",
+      "agent_type": "react",
+      "gold_answer": "Indianapolis Motor Speedway",
+      "predicted_answer": "North Carolina Speedway",
+      "is_correct": false,
+      "attempts": 1,
+      "failure_mode": "wrong_final_answer",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq054",
+      "agent_type": "react",
+      "gold_answer": "Rome",
+      "predicted_answer": "New York City",
+      "is_correct": false,
+      "attempts": 1,
+      "failure_mode": "wrong_final_answer",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq055",
+      "agent_type": "react",
+      "gold_answer": "Max Martin, Savan Kotecha and Ilya Salmanzadeh",
+      "predicted_answer": "Max Martin, Savan Kotecha, Ilya Salmanzadeh",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq056",
+      "agent_type": "react",
+      "gold_answer": "Marion, South Australia",
+      "predicted_answer": "Adelaide",
+      "is_correct": false,
+      "attempts": 1,
+      "failure_mode": "wrong_final_answer",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq057",
+      "agent_type": "react",
+      "gold_answer": "Drifting",
+      "predicted_answer": "Drifting",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq058",
+      "agent_type": "react",
+      "gold_answer": "Keith Bostic",
+      "predicted_answer": "Keith Bostic",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq059",
+      "agent_type": "react",
+      "gold_answer": "35,124",
+      "predicted_answer": "35,124",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq060",
+      "agent_type": "react",
+      "gold_answer": "no",
+      "predicted_answer": "No",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq061",
+      "agent_type": "react",
+      "gold_answer": "shortest player ever to play in the National Basketball Association",
+      "predicted_answer": "Alonzo Mourning",
+      "is_correct": false,
+      "attempts": 1,
+      "failure_mode": "wrong_final_answer",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq062",
+      "agent_type": "react",
+      "gold_answer": "Ronald Shusett",
+      "predicted_answer": "Francis Ford Coppola",
+      "is_correct": false,
+      "attempts": 1,
+      "failure_mode": "wrong_final_answer",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq063",
+      "agent_type": "react",
+      "gold_answer": "Adeline Virginia Woolf",
+      "predicted_answer": "Virginia Woolf",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq064",
+      "agent_type": "react",
+      "gold_answer": "821",
+      "predicted_answer": "821",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq065",
+      "agent_type": "react",
+      "gold_answer": "more than 70 countries",
+      "predicted_answer": "70",
+      "is_correct": false,
+      "attempts": 1,
+      "failure_mode": "wrong_final_answer",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq066",
+      "agent_type": "react",
+      "gold_answer": "Charmed",
+      "predicted_answer": "Charmed",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq067",
+      "agent_type": "react",
+      "gold_answer": "International Boxing Hall of Fame",
+      "predicted_answer": "International Boxing Hall of Fame",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq068",
+      "agent_type": "react",
+      "gold_answer": "Usher",
+      "predicted_answer": "Usher",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq069",
+      "agent_type": "react",
+      "gold_answer": "Bill Murray",
+      "predicted_answer": "Henry Thomas",
+      "is_correct": false,
+      "attempts": 1,
+      "failure_mode": "wrong_final_answer",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq070",
+      "agent_type": "react",
+      "gold_answer": "Carabao Cup",
+      "predicted_answer": "Carabao Cup",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq071",
+      "agent_type": "react",
+      "gold_answer": "Teen Titans Go!",
+      "predicted_answer": "Teen Titans Go!",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq072",
+      "agent_type": "react",
+      "gold_answer": "276,170 inhabitants",
+      "predicted_answer": "276,170",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq073",
+      "agent_type": "react",
+      "gold_answer": "orange",
+      "predicted_answer": "orange",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq074",
+      "agent_type": "react",
+      "gold_answer": "Tromeo and Juliet",
+      "predicted_answer": "Tromeo and Juliet",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq075",
+      "agent_type": "react",
+      "gold_answer": "William Jefferson Clinton",
+      "predicted_answer": "Bill Clinton",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq076",
+      "agent_type": "react",
+      "gold_answer": "John John Florence",
+      "predicted_answer": "John John Florence",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq077",
+      "agent_type": "react",
+      "gold_answer": "Ann",
+      "predicted_answer": "Christopher",
+      "is_correct": false,
+      "attempts": 1,
+      "failure_mode": "wrong_final_answer",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq078",
+      "agent_type": "react",
+      "gold_answer": "Apalachees",
+      "predicted_answer": "Ais",
+      "is_correct": false,
+      "attempts": 1,
+      "failure_mode": "wrong_final_answer",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq079",
+      "agent_type": "react",
+      "gold_answer": "British",
+      "predicted_answer": "British",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq080",
+      "agent_type": "react",
+      "gold_answer": "1865",
+      "predicted_answer": "1865",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq081",
+      "agent_type": "react",
+      "gold_answer": "Newport",
+      "predicted_answer": "Newport",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq082",
+      "agent_type": "react",
+      "gold_answer": "Bob Seger",
+      "predicted_answer": "Bob Seger",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq083",
+      "agent_type": "react",
+      "gold_answer": "Conscription",
+      "predicted_answer": "requiring only men to register for the draft",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq084",
+      "agent_type": "react",
+      "gold_answer": "Mondelez International, Inc.",
+      "predicted_answer": "Mondelez International",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq085",
+      "agent_type": "react",
+      "gold_answer": "Monica Lewinsky",
+      "predicted_answer": "Monica Lewinsky",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq086",
+      "agent_type": "react",
+      "gold_answer": "April 1, 1949",
+      "predicted_answer": "April 1, 1949",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq087",
+      "agent_type": "react",
+      "gold_answer": "1866",
+      "predicted_answer": "1866",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq088",
+      "agent_type": "react",
+      "gold_answer": "Canary Islands, Spain",
+      "predicted_answer": "La Gomera, Tenerife",
+      "is_correct": false,
+      "attempts": 1,
+      "failure_mode": "wrong_final_answer",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq089",
+      "agent_type": "react",
+      "gold_answer": "250 million",
+      "predicted_answer": "250 million",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq090",
+      "agent_type": "react",
+      "gold_answer": "director",
+      "predicted_answer": "director",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq091",
+      "agent_type": "react",
+      "gold_answer": "The Conversation",
+      "predicted_answer": "The Conversation",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq092",
+      "agent_type": "react",
+      "gold_answer": "John Waters",
+      "predicted_answer": "John Waters",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq093",
+      "agent_type": "react",
+      "gold_answer": "Las Vegas Strip in Paradise",
+      "predicted_answer": "Flamingo Hotel",
+      "is_correct": false,
+      "attempts": 1,
+      "failure_mode": "wrong_final_answer",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq094",
+      "agent_type": "react",
+      "gold_answer": "no",
+      "predicted_answer": "No",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq095",
+      "agent_type": "react",
+      "gold_answer": "March and April",
+      "predicted_answer": "March and April",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq096",
+      "agent_type": "react",
+      "gold_answer": "Fairfax County",
+      "predicted_answer": "Fairfax County",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq097",
+      "agent_type": "react",
+      "gold_answer": "IT products and services",
+      "predicted_answer": "IT products and services",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq098",
+      "agent_type": "react",
+      "gold_answer": "Levni Yilmaz",
+      "predicted_answer": "Lev Yilmaz",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq099",
+      "agent_type": "react",
+      "gold_answer": "Beijing",
+      "predicted_answer": "Rabat",
+      "is_correct": false,
+      "attempts": 1,
+      "failure_mode": "wrong_final_answer",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq100",
+      "agent_type": "react",
+      "gold_answer": "no",
+      "predicted_answer": "No",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq101",
+      "agent_type": "react",
+      "gold_answer": "Coahuila, Mexico",
+      "predicted_answer": "Oklahoma",
+      "is_correct": false,
+      "attempts": 1,
+      "failure_mode": "wrong_final_answer",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq102",
+      "agent_type": "react",
+      "gold_answer": "Larnelle Harris",
+      "predicted_answer": "Andra\u00e9 Crouch",
+      "is_correct": false,
+      "attempts": 1,
+      "failure_mode": "wrong_final_answer",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq103",
+      "agent_type": "react",
+      "gold_answer": "2003",
+      "predicted_answer": "2003",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq104",
+      "agent_type": "react",
+      "gold_answer": "North Avenue at Techwood Drive",
+      "predicted_answer": "Atlanta, Georgia",
+      "is_correct": false,
+      "attempts": 1,
+      "failure_mode": "wrong_final_answer",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq105",
+      "agent_type": "react",
+      "gold_answer": "Leo Varadkar",
+      "predicted_answer": "Leo Varadkar",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq106",
+      "agent_type": "react",
+      "gold_answer": "George Raft",
+      "predicted_answer": "George Raft",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq107",
+      "agent_type": "react",
+      "gold_answer": "1887",
+      "predicted_answer": "1887",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq108",
+      "agent_type": "react",
+      "gold_answer": "business",
+      "predicted_answer": "valuation method",
+      "is_correct": false,
+      "attempts": 1,
+      "failure_mode": "wrong_final_answer",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq109",
+      "agent_type": "react",
+      "gold_answer": "7 October 1978",
+      "predicted_answer": "1978",
+      "is_correct": false,
+      "attempts": 1,
+      "failure_mode": "wrong_final_answer",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq110",
+      "agent_type": "react",
+      "gold_answer": "B-17 Flying Fortress bomber",
+      "predicted_answer": "B-17 Flying Fortress",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq111",
+      "agent_type": "react",
+      "gold_answer": "Blake Shelton",
+      "predicted_answer": "Blake Shelton",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq112",
+      "agent_type": "react",
+      "gold_answer": "three centuries",
+      "predicted_answer": "three",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq113",
+      "agent_type": "react",
+      "gold_answer": "7 January 1936",
+      "predicted_answer": "7 January 1936",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq114",
+      "agent_type": "react",
+      "gold_answer": "George Archainbaud",
+      "predicted_answer": "George Archainbaud",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq115",
+      "agent_type": "react",
+      "gold_answer": "picric acid",
+      "predicted_answer": "Picric acid",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq116",
+      "agent_type": "react",
+      "gold_answer": "230",
+      "predicted_answer": "16",
+      "is_correct": false,
+      "attempts": 1,
+      "failure_mode": "wrong_final_answer",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq117",
+      "agent_type": "react",
+      "gold_answer": "Marvel",
+      "predicted_answer": "Marvel Comics",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq118",
+      "agent_type": "react",
+      "gold_answer": "United States Senator",
+      "predicted_answer": "U.S. Representative",
+      "is_correct": false,
+      "attempts": 1,
+      "failure_mode": "wrong_final_answer",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq119",
+      "agent_type": "react",
+      "gold_answer": "no",
+      "predicted_answer": "No",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq120",
+      "agent_type": "react",
+      "gold_answer": "yes",
+      "predicted_answer": "yes",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq001",
+      "agent_type": "reflexion",
+      "gold_answer": "yes",
+      "predicted_answer": "yes",
+      "is_correct": true,
+      "attempts": 2,
+      "failure_mode": "none",
+      "reflection_count": 1
+    },
+    {
+      "qid": "hq002",
+      "agent_type": "reflexion",
+      "gold_answer": "Chief of Protocol",
+      "predicted_answer": "Chief of Protocol",
+      "is_correct": true,
+      "attempts": 3,
+      "failure_mode": "none",
+      "reflection_count": 2
+    },
+    {
+      "qid": "hq003",
+      "agent_type": "reflexion",
+      "gold_answer": "Animorphs",
+      "predicted_answer": "Animorphs",
+      "is_correct": true,
+      "attempts": 2,
+      "failure_mode": "none",
+      "reflection_count": 1
+    },
+    {
+      "qid": "hq004",
+      "agent_type": "reflexion",
+      "gold_answer": "no",
+      "predicted_answer": "No",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq005",
+      "agent_type": "reflexion",
+      "gold_answer": "Greenwich Village, New York City",
+      "predicted_answer": "Greenwich Village",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq006",
+      "agent_type": "reflexion",
+      "gold_answer": "YG Entertainment",
+      "predicted_answer": "YG Entertainment",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq007",
+      "agent_type": "reflexion",
+      "gold_answer": "Eenasul Fateh",
+      "predicted_answer": "Eenasul Fateh",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq008",
+      "agent_type": "reflexion",
+      "gold_answer": "3,677 seated",
+      "predicted_answer": "3,677",
+      "is_correct": true,
+      "attempts": 2,
+      "failure_mode": "none",
+      "reflection_count": 1
+    },
+    {
+      "qid": "hq009",
+      "agent_type": "reflexion",
+      "gold_answer": "Terry Richardson",
+      "predicted_answer": "Terry Richardson",
+      "is_correct": true,
+      "attempts": 2,
+      "failure_mode": "none",
+      "reflection_count": 1
+    },
+    {
+      "qid": "hq010",
+      "agent_type": "reflexion",
+      "gold_answer": "yes",
+      "predicted_answer": "yes",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq011",
+      "agent_type": "reflexion",
+      "gold_answer": "Kansas Song",
+      "predicted_answer": "Kansas Song",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq012",
+      "agent_type": "reflexion",
+      "gold_answer": "David Weissman",
+      "predicted_answer": "David Weissman",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq013",
+      "agent_type": "reflexion",
+      "gold_answer": "1999",
+      "predicted_answer": "1999",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq014",
+      "agent_type": "reflexion",
+      "gold_answer": "no",
+      "predicted_answer": "No",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq015",
+      "agent_type": "reflexion",
+      "gold_answer": "from 1986 to 2013",
+      "predicted_answer": "1986 to 2013",
+      "is_correct": true,
+      "attempts": 2,
+      "failure_mode": "none",
+      "reflection_count": 1
+    },
+    {
+      "qid": "hq016",
+      "agent_type": "reflexion",
+      "gold_answer": "9,984",
+      "predicted_answer": "9,984",
+      "is_correct": true,
+      "attempts": 2,
+      "failure_mode": "none",
+      "reflection_count": 1
+    },
+    {
+      "qid": "hq017",
+      "agent_type": "reflexion",
+      "gold_answer": "the North Atlantic Conference",
+      "predicted_answer": "North Atlantic Conference",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq018",
+      "agent_type": "reflexion",
+      "gold_answer": "yes",
+      "predicted_answer": "yes",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq019",
+      "agent_type": "reflexion",
+      "gold_answer": "1969 until 1974",
+      "predicted_answer": "1969-1974",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq020",
+      "agent_type": "reflexion",
+      "gold_answer": "Robert Erskine Childers DSC",
+      "predicted_answer": "Robert Erskine Childers",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq021",
+      "agent_type": "reflexion",
+      "gold_answer": "Pedro Rodr\u00edguez",
+      "predicted_answer": "Pedro Rodr\u00edguez",
+      "is_correct": true,
+      "attempts": 2,
+      "failure_mode": "none",
+      "reflection_count": 1
+    },
+    {
+      "qid": "hq022",
+      "agent_type": "reflexion",
+      "gold_answer": "Sonic",
+      "predicted_answer": "Tails",
+      "is_correct": false,
+      "attempts": 3,
+      "failure_mode": "reflection_overfit",
+      "reflection_count": 2
+    },
+    {
+      "qid": "hq023",
+      "agent_type": "reflexion",
+      "gold_answer": "keyboard function keys",
+      "predicted_answer": "keyboard function keys",
+      "is_correct": true,
+      "attempts": 2,
+      "failure_mode": "none",
+      "reflection_count": 1
+    },
+    {
+      "qid": "hq024",
+      "agent_type": "reflexion",
+      "gold_answer": "Badly Drawn Boy",
+      "predicted_answer": "Badly Drawn Boy",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq025",
+      "agent_type": "reflexion",
+      "gold_answer": "World's Best Goalkeeper",
+      "predicted_answer": "Peter Schmeichel",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq026",
+      "agent_type": "reflexion",
+      "gold_answer": "Barton Lee Hazlewood",
+      "predicted_answer": "Lee Hazlewood",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq027",
+      "agent_type": "reflexion",
+      "gold_answer": "1838",
+      "predicted_answer": "1838",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq028",
+      "agent_type": "reflexion",
+      "gold_answer": "yes",
+      "predicted_answer": "yes",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq029",
+      "agent_type": "reflexion",
+      "gold_answer": "Henry J. Kaiser",
+      "predicted_answer": "Henry J. Kaiser",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq030",
+      "agent_type": "reflexion",
+      "gold_answer": "Arena of Khazan",
+      "predicted_answer": "Arena of Khazan",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq031",
+      "agent_type": "reflexion",
+      "gold_answer": "2000",
+      "predicted_answer": "2000",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq032",
+      "agent_type": "reflexion",
+      "gold_answer": "Fujioka, Gunma",
+      "predicted_answer": "Japan",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq033",
+      "agent_type": "reflexion",
+      "gold_answer": "Charles Eug\u00e8ne",
+      "predicted_answer": "Charles Nungesser",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq034",
+      "agent_type": "reflexion",
+      "gold_answer": "no",
+      "predicted_answer": "No",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq035",
+      "agent_type": "reflexion",
+      "gold_answer": "Letters to Cleo",
+      "predicted_answer": "Letters to Cleo",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq036",
+      "agent_type": "reflexion",
+      "gold_answer": "October 1922",
+      "predicted_answer": "1922",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq037",
+      "agent_type": "reflexion",
+      "gold_answer": "2000",
+      "predicted_answer": "2000",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq038",
+      "agent_type": "reflexion",
+      "gold_answer": "World War II",
+      "predicted_answer": "World War II",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq039",
+      "agent_type": "reflexion",
+      "gold_answer": "no",
+      "predicted_answer": "No",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq040",
+      "agent_type": "reflexion",
+      "gold_answer": "New York City",
+      "predicted_answer": "New York City",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq041",
+      "agent_type": "reflexion",
+      "gold_answer": "Scotch Collie",
+      "predicted_answer": "Scotch Collie",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq042",
+      "agent_type": "reflexion",
+      "gold_answer": "Mumbai",
+      "predicted_answer": "Mumbai",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq043",
+      "agent_type": "reflexion",
+      "gold_answer": "1962",
+      "predicted_answer": "1962",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq044",
+      "agent_type": "reflexion",
+      "gold_answer": "sovereignty",
+      "predicted_answer": "Ethiopian sovereignty",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq045",
+      "agent_type": "reflexion",
+      "gold_answer": "Nelson Rockefeller",
+      "predicted_answer": "Nelson Rockefeller",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq046",
+      "agent_type": "reflexion",
+      "gold_answer": "Yellowcraig",
+      "predicted_answer": "Yellowcraigs",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq047",
+      "agent_type": "reflexion",
+      "gold_answer": "Phil Spector",
+      "predicted_answer": "Phil Spector",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq048",
+      "agent_type": "reflexion",
+      "gold_answer": "Organizations could come together to address global issues",
+      "predicted_answer": "World Summit of Nobel Peace Laureates",
+      "is_correct": false,
+      "attempts": 3,
+      "failure_mode": "reflection_overfit",
+      "reflection_count": 2
+    },
+    {
+      "qid": "hq049",
+      "agent_type": "reflexion",
+      "gold_answer": "yes",
+      "predicted_answer": "yes",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq050",
+      "agent_type": "reflexion",
+      "gold_answer": "English Electric Canberra",
+      "predicted_answer": "English Electric Canberra",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq051",
+      "agent_type": "reflexion",
+      "gold_answer": "2009 Big 12 Conference",
+      "predicted_answer": "2009 Big 12 Conference football season",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq052",
+      "agent_type": "reflexion",
+      "gold_answer": "1,462",
+      "predicted_answer": "1,462",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq053",
+      "agent_type": "reflexion",
+      "gold_answer": "Indianapolis Motor Speedway",
+      "predicted_answer": "Darlington Raceway",
+      "is_correct": false,
+      "attempts": 3,
+      "failure_mode": "reflection_overfit",
+      "reflection_count": 2
+    },
+    {
+      "qid": "hq054",
+      "agent_type": "reflexion",
+      "gold_answer": "Rome",
+      "predicted_answer": "Rome",
+      "is_correct": true,
+      "attempts": 2,
+      "failure_mode": "none",
+      "reflection_count": 1
+    },
+    {
+      "qid": "hq055",
+      "agent_type": "reflexion",
+      "gold_answer": "Max Martin, Savan Kotecha and Ilya Salmanzadeh",
+      "predicted_answer": "Max Martin, Savan Kotecha, Ilya Salmanzadeh",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq056",
+      "agent_type": "reflexion",
+      "gold_answer": "Marion, South Australia",
+      "predicted_answer": "Marion, South Australia",
+      "is_correct": true,
+      "attempts": 3,
+      "failure_mode": "none",
+      "reflection_count": 2
+    },
+    {
+      "qid": "hq057",
+      "agent_type": "reflexion",
+      "gold_answer": "Drifting",
+      "predicted_answer": "Drifting",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq058",
+      "agent_type": "reflexion",
+      "gold_answer": "Keith Bostic",
+      "predicted_answer": "Keith Bostic",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq059",
+      "agent_type": "reflexion",
+      "gold_answer": "35,124",
+      "predicted_answer": "35,124",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq060",
+      "agent_type": "reflexion",
+      "gold_answer": "no",
+      "predicted_answer": "No",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq061",
+      "agent_type": "reflexion",
+      "gold_answer": "shortest player ever to play in the National Basketball Association",
+      "predicted_answer": "Muggsy Bogues",
+      "is_correct": true,
+      "attempts": 2,
+      "failure_mode": "none",
+      "reflection_count": 1
+    },
+    {
+      "qid": "hq062",
+      "agent_type": "reflexion",
+      "gold_answer": "Ronald Shusett",
+      "predicted_answer": "Ronald Shusett",
+      "is_correct": true,
+      "attempts": 2,
+      "failure_mode": "none",
+      "reflection_count": 1
+    },
+    {
+      "qid": "hq063",
+      "agent_type": "reflexion",
+      "gold_answer": "Adeline Virginia Woolf",
+      "predicted_answer": "Virginia Woolf",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq064",
+      "agent_type": "reflexion",
+      "gold_answer": "821",
+      "predicted_answer": "821",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq065",
+      "agent_type": "reflexion",
+      "gold_answer": "more than 70 countries",
+      "predicted_answer": "more than 70 countries",
+      "is_correct": true,
+      "attempts": 2,
+      "failure_mode": "none",
+      "reflection_count": 1
+    },
+    {
+      "qid": "hq066",
+      "agent_type": "reflexion",
+      "gold_answer": "Charmed",
+      "predicted_answer": "Charmed",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq067",
+      "agent_type": "reflexion",
+      "gold_answer": "International Boxing Hall of Fame",
+      "predicted_answer": "International Boxing Hall of Fame",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq068",
+      "agent_type": "reflexion",
+      "gold_answer": "Usher",
+      "predicted_answer": "Usher",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq069",
+      "agent_type": "reflexion",
+      "gold_answer": "Bill Murray",
+      "predicted_answer": "Henry Thomas",
+      "is_correct": false,
+      "attempts": 3,
+      "failure_mode": "reflection_overfit",
+      "reflection_count": 2
+    },
+    {
+      "qid": "hq070",
+      "agent_type": "reflexion",
+      "gold_answer": "Carabao Cup",
+      "predicted_answer": "Carabao Cup",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq071",
+      "agent_type": "reflexion",
+      "gold_answer": "Teen Titans Go!",
+      "predicted_answer": "Teen Titans Go!",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq072",
+      "agent_type": "reflexion",
+      "gold_answer": "276,170 inhabitants",
+      "predicted_answer": "276,170",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq073",
+      "agent_type": "reflexion",
+      "gold_answer": "orange",
+      "predicted_answer": "orange",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq074",
+      "agent_type": "reflexion",
+      "gold_answer": "Tromeo and Juliet",
+      "predicted_answer": "Tromeo and Juliet",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq075",
+      "agent_type": "reflexion",
+      "gold_answer": "William Jefferson Clinton",
+      "predicted_answer": "Bill Clinton",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq076",
+      "agent_type": "reflexion",
+      "gold_answer": "John John Florence",
+      "predicted_answer": "John John Florence",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq077",
+      "agent_type": "reflexion",
+      "gold_answer": "Ann",
+      "predicted_answer": "Ann",
+      "is_correct": true,
+      "attempts": 2,
+      "failure_mode": "none",
+      "reflection_count": 1
+    },
+    {
+      "qid": "hq078",
+      "agent_type": "reflexion",
+      "gold_answer": "Apalachees",
+      "predicted_answer": "Apalachees",
+      "is_correct": true,
+      "attempts": 2,
+      "failure_mode": "none",
+      "reflection_count": 1
+    },
+    {
+      "qid": "hq079",
+      "agent_type": "reflexion",
+      "gold_answer": "British",
+      "predicted_answer": "British",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq080",
+      "agent_type": "reflexion",
+      "gold_answer": "1865",
+      "predicted_answer": "1865",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq081",
+      "agent_type": "reflexion",
+      "gold_answer": "Newport",
+      "predicted_answer": "Newport",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq082",
+      "agent_type": "reflexion",
+      "gold_answer": "Bob Seger",
+      "predicted_answer": "Bob Seger",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq083",
+      "agent_type": "reflexion",
+      "gold_answer": "Conscription",
+      "predicted_answer": "requiring only men to register for the draft",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq084",
+      "agent_type": "reflexion",
+      "gold_answer": "Mondelez International, Inc.",
+      "predicted_answer": "Mondelez International",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq085",
+      "agent_type": "reflexion",
+      "gold_answer": "Monica Lewinsky",
+      "predicted_answer": "Monica Lewinsky",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq086",
+      "agent_type": "reflexion",
+      "gold_answer": "April 1, 1949",
+      "predicted_answer": "April 1, 1949",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq087",
+      "agent_type": "reflexion",
+      "gold_answer": "1866",
+      "predicted_answer": "1866",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq088",
+      "agent_type": "reflexion",
+      "gold_answer": "Canary Islands, Spain",
+      "predicted_answer": "Canary Islands, Spain",
+      "is_correct": true,
+      "attempts": 2,
+      "failure_mode": "none",
+      "reflection_count": 1
+    },
+    {
+      "qid": "hq089",
+      "agent_type": "reflexion",
+      "gold_answer": "250 million",
+      "predicted_answer": "250 million",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq090",
+      "agent_type": "reflexion",
+      "gold_answer": "director",
+      "predicted_answer": "director",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq091",
+      "agent_type": "reflexion",
+      "gold_answer": "The Conversation",
+      "predicted_answer": "The Conversation",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq092",
+      "agent_type": "reflexion",
+      "gold_answer": "John Waters",
+      "predicted_answer": "John Waters",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq093",
+      "agent_type": "reflexion",
+      "gold_answer": "Las Vegas Strip in Paradise",
+      "predicted_answer": "Flamingo Las Vegas",
+      "is_correct": false,
+      "attempts": 3,
+      "failure_mode": "reflection_overfit",
+      "reflection_count": 2
+    },
+    {
+      "qid": "hq094",
+      "agent_type": "reflexion",
+      "gold_answer": "no",
+      "predicted_answer": "No",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq095",
+      "agent_type": "reflexion",
+      "gold_answer": "March and April",
+      "predicted_answer": "March and April",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq096",
+      "agent_type": "reflexion",
+      "gold_answer": "Fairfax County",
+      "predicted_answer": "Fairfax County",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq097",
+      "agent_type": "reflexion",
+      "gold_answer": "IT products and services",
+      "predicted_answer": "IT products and services",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq098",
+      "agent_type": "reflexion",
+      "gold_answer": "Levni Yilmaz",
+      "predicted_answer": "Lev Yilmaz",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq099",
+      "agent_type": "reflexion",
+      "gold_answer": "Beijing",
+      "predicted_answer": "Beijing",
+      "is_correct": true,
+      "attempts": 2,
+      "failure_mode": "none",
+      "reflection_count": 1
+    },
+    {
+      "qid": "hq100",
+      "agent_type": "reflexion",
+      "gold_answer": "no",
+      "predicted_answer": "No",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq101",
+      "agent_type": "reflexion",
+      "gold_answer": "Coahuila, Mexico",
+      "predicted_answer": "Coahuila, Mexico",
+      "is_correct": true,
+      "attempts": 2,
+      "failure_mode": "none",
+      "reflection_count": 1
+    },
+    {
+      "qid": "hq102",
+      "agent_type": "reflexion",
+      "gold_answer": "Larnelle Harris",
+      "predicted_answer": "Larnelle Harris",
+      "is_correct": true,
+      "attempts": 2,
+      "failure_mode": "none",
+      "reflection_count": 1
+    },
+    {
+      "qid": "hq103",
+      "agent_type": "reflexion",
+      "gold_answer": "2003",
+      "predicted_answer": "2003",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq104",
+      "agent_type": "reflexion",
+      "gold_answer": "North Avenue at Techwood Drive",
+      "predicted_answer": "North Avenue at Techwood Drive",
+      "is_correct": true,
+      "attempts": 3,
+      "failure_mode": "none",
+      "reflection_count": 2
+    },
+    {
+      "qid": "hq105",
+      "agent_type": "reflexion",
+      "gold_answer": "Leo Varadkar",
+      "predicted_answer": "Leo Varadkar",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq106",
+      "agent_type": "reflexion",
+      "gold_answer": "George Raft",
+      "predicted_answer": "George Raft",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq107",
+      "agent_type": "reflexion",
+      "gold_answer": "1887",
+      "predicted_answer": "1887",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq108",
+      "agent_type": "reflexion",
+      "gold_answer": "business",
+      "predicted_answer": "business",
+      "is_correct": true,
+      "attempts": 2,
+      "failure_mode": "none",
+      "reflection_count": 1
+    },
+    {
+      "qid": "hq109",
+      "agent_type": "reflexion",
+      "gold_answer": "7 October 1978",
+      "predicted_answer": "7 October 1978",
+      "is_correct": true,
+      "attempts": 2,
+      "failure_mode": "none",
+      "reflection_count": 1
+    },
+    {
+      "qid": "hq110",
+      "agent_type": "reflexion",
+      "gold_answer": "B-17 Flying Fortress bomber",
+      "predicted_answer": "B-17 Flying Fortress",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq111",
+      "agent_type": "reflexion",
+      "gold_answer": "Blake Shelton",
+      "predicted_answer": "Blake Shelton",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq112",
+      "agent_type": "reflexion",
+      "gold_answer": "three centuries",
+      "predicted_answer": "three",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq113",
+      "agent_type": "reflexion",
+      "gold_answer": "7 January 1936",
+      "predicted_answer": "7 January 1936",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq114",
+      "agent_type": "reflexion",
+      "gold_answer": "George Archainbaud",
+      "predicted_answer": "George Archainbaud",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq115",
+      "agent_type": "reflexion",
+      "gold_answer": "picric acid",
+      "predicted_answer": "Picric acid",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq116",
+      "agent_type": "reflexion",
+      "gold_answer": "230",
+      "predicted_answer": "230",
+      "is_correct": true,
+      "attempts": 2,
+      "failure_mode": "none",
+      "reflection_count": 1
+    },
+    {
+      "qid": "hq117",
+      "agent_type": "reflexion",
+      "gold_answer": "Marvel",
+      "predicted_answer": "Marvel Comics",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq118",
+      "agent_type": "reflexion",
+      "gold_answer": "United States Senator",
+      "predicted_answer": "U.S. Representative",
+      "is_correct": false,
+      "attempts": 3,
+      "failure_mode": "reflection_overfit",
+      "reflection_count": 2
+    },
+    {
+      "qid": "hq119",
+      "agent_type": "reflexion",
+      "gold_answer": "no",
+      "predicted_answer": "No",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "hq120",
+      "agent_type": "reflexion",
+      "gold_answer": "yes",
+      "predicted_answer": "yes",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    }
+  ],
+  "extensions": [
+    "structured_evaluator",
+    "reflection_memory",
+    "benchmark_report_json"
+  ],
+  "discussion": "The structured_evaluator extension enforces JSON output at three levels: Ollama's native format='json' grammar constraint eliminates prose preambles at the model level; Pydantic's model_validate_json then validates field types and value ranges (score \u2208 {0,1}); a regex-extraction layer handles any residual formatting drift; and a hard fallback ensures the loop never crashes. The reflection_memory extension passes a numbered <reflection_memory> XML block to the Actor on every retry, containing the failure_reason, lesson, and next_strategy from all prior ReflectionEntries. This gives the Actor explicit, structured guidance rather than relying on implicit re-sampling. Reflexion improved EM on multi-hop questions where the first attempt stopped at an intermediate entity, while offering diminishing returns on single-hop questions the Actor answered correctly first time. Remaining failure modes include entity_drift (wrong second-hop entity despite reflection) and reflection_overfit (the agent anchors too strongly on the strategy from attempt 1, ignoring context evidence in later attempts)."
+}
